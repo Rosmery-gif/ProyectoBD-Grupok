@@ -3,6 +3,8 @@
 -- CREACIÓN DE LA BASE DE DATOS
 create database GestionBiblioteca;
 
+--Conexion a la BASE DE DATOS
+\c gestionbiblioteca
 
 -- SECCIÓN 1: TABLAS BÁSICAS (DATOS QUE NO DEPENDEN DE OTRAS TABLAS)
 
