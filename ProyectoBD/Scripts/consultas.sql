@@ -17,3 +17,24 @@ join prestamo p on m.id_prestamo = p.id_prestamo
 join socio s on p.id_socio = s.id_socio
 where m.estado_pago = 'Pendiente'
 order by dias_retraso;
+
+--Autores con mayor número de títulos en catálogo
+select a.id_autor  , a.nombre, count(*) numero_titulos
+from libro l 
+join libro_autor la on l.isbn = la.isbn
+join autor a on la.id_autor = a.id_autor
+group by a.nombre, a.id_autor 
+order by numero_titulos desc
+limit 10;
+
+--Ejemplares que nunca han sido prestados
+select e.id_ejemplar , l.titulo 
+from ejemplar e 
+join libro l on e.isbn = l.isbn
+left join prestamo p on e.id_ejemplar = p.id_ejemplar 
+where p.id_ejemplar is null;
+
+--Empleado que ha procesado más prestamos en el mes
+select
+from empleado e 
+join prestamo p 
