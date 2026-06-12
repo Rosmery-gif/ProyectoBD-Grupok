@@ -35,6 +35,11 @@ left join prestamo p on e.id_ejemplar = p.id_ejemplar
 where p.id_ejemplar is null;
 
 --Empleado que ha procesado más prestamos en el mes
-select
+select e.id_empleado , e.nombre , count(p.id_prestamo ) prestamos
 from empleado e 
-join prestamo p 
+join prestamo p on e.id_empleado = p.id_empleado_prestamo
+where extract(month from p.fecha_prestamo ) = extract(month from current_date)
+and extract(year from p.fecha_prestamo ) = extract(year from current_date)
+group by e.id_empleado, e.nombre 
+order by prestamos  desc 
+limit 1;
