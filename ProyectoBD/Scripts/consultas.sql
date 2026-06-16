@@ -43,3 +43,21 @@ and extract(year from p.fecha_prestamo ) = extract(year from current_date)
 group by e.id_empleado, e.nombre 
 order by prestamos  desc 
 limit 1;
+
+--Socios con más libros prestados
+select s.id_socio , s.nombre  || ' ' || s.apellido nombre_socio, count (p.id_prestamo ) libros_prestados
+from socio s 
+join prestamo p on s.id_socio = p.id_socio
+where p.estado_prestamo = 'Prestado'
+group by s.id_socio  
+order by libros_prestados desc
+limit 10;
+
+--Categoría con más ejemplares
+select c.nombre_categoria , count(e.id_ejemplar ) total_ejemplares
+from libro l 
+join categoria c on l.id_categoria = c.id_categoria
+join ejemplar e on l.isbn = e.isbn 
+group by c.nombre_categoria
+order by total_ejemplares desc 
+limit 3;
