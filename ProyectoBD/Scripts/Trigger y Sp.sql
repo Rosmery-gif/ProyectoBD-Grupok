@@ -118,6 +118,25 @@ after update on multa
 for each row
 execute function fn_actualiza_estado_multa();
 
+------------------------------------------------------------------------------------------
+--libros por categoria
+
+create or replace function fn_consulta_categoria(p_nombre_categoria varchar)
+returns table (
+isbn_libro varchar,
+titulo_libro varchar
+)			
+language plpgsql
+as $$
+begin
+return query
+	select l.isbn, l.titulo
+	from libro l
+	inner join categoria c on l.id_categoria = c.id_categoria
+	WHERE c.nombre_categoria = p_nombre_categoria;
+	end;
+$$;
+
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 --Prueba de triggers y sp
@@ -142,6 +161,8 @@ call sp_calcular_multas(1);
 select id_prestamo, estado_prestamo from prestamo where id_prestamo = 1;
 select * from multa where id_prestamo = 1;
 
+--Consultar libros por categoria
+select * from fn_consulta_categoria('Terror');
 
 --Prueba general
 
