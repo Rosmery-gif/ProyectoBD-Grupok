@@ -42,7 +42,10 @@ create table Socio (
     estado varchar(20) not null default 'Activo' -- Estado Activo por defecto
     
     -- Solo permite que el socio esté en uno de estos dos estados
-    check (estado in ('Activo', 'Inactivo'))
+    cestado varchar(20) not null default 'Activo',
+
+	constraint chk_socio_estado
+    	check (estado in ('Activo', 'Inactivo'))
 );
 
 
@@ -60,7 +63,10 @@ create table Tarifa_multa (
     descripcion varchar(100) not null, 
     
     -- Evita que se pongan precios negativos
-    precio_por_dia numeric(6,2) not null check (precio_por_dia >= 0)
+    precio_por_dia numeric(6,2) not null,
+
+	constraint chk_tarifa_precio
+    	check (precio_por_dia >= 0)
 );
 
 
@@ -94,7 +100,10 @@ create table Ejemplar (
     estado varchar(30) not null default 'Disponible',
     
     -- Solo permite que el libro físico esté en uno de estos dos estados
-    check (estado in ('Disponible', 'Reservado')),
+    estado varchar(30) not null default 'Disponible',
+
+	constraint chk_ejemplar_estado
+    	check (estado in ('Disponible', 'Reservado')),
     constraint fk_ejemplar_libro foreign key (ISBN)
         references Libro(ISBN) on delete restrict
 );
@@ -130,9 +139,12 @@ create table Prestamo (
     -- Campos de Devolución (empiezan como NULL hasta se devuelva el libro)
     fecha_devolucion date null,
     id_empleado_devolucion bigint null, -- Empleado que recibe el libro
-    estado_prestamo varchar(20) not null default 'Prestado'
-    -- Solo permite que el prestamo esté en uno de estos tres estados
-    check (estado_prestamo in ('Prestado', 'Devuelto', 'Vencido')), 
+	
+	-- Solo permite que el prestamo esté en uno de estos tres estados
+    estado_prestamo varchar(20) not null default 'Prestado',
+
+	constraint chk_prestamo_estado
+   	 check (estado_prestamo in ('Prestado', 'Devuelto', 'Vencido')),
     
     
     constraint fk_prestamo_ejemplar foreign key (id_ejemplar)
