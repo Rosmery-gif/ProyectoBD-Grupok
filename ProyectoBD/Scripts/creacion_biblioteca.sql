@@ -12,7 +12,8 @@ create database GestionBiblioteca;
 -- 1. EDITORIAL: Guarda las empresas que publican los libros
 create table Editorial (
     id_editorial bigint generated always as identity primary key,
-    nombre varchar(100) not null unique,
+    nombre varchar(100) not null,
+		constraint uq_editorial_nombre unique (nombre),
     pais varchar(60) not null
 );
 
@@ -20,7 +21,8 @@ create table Editorial (
 -- 2. CATEGORIA: Los temas de los libros (ej. Terror, Romance, Historia)
 create table Categoria (
     id_categoria bigint generated always as identity primary key,
-    nombre_categoria varchar(80) not null unique
+   	nombre_categoria varchar(80) not null,
+		constraint uq_categoria_nombre unique (nombre_categoria)
 );
 
 
@@ -37,7 +39,8 @@ create table Socio (
     id_socio bigint generated always as identity primary key,
     nombre varchar(80) not null,
     apellido varchar(80) not null,
-    email varchar(120) not null unique,
+    email varchar(120) not null,
+		constraint uq_socio_email unique (email),
     telefono varchar(20) not null,
     estado varchar(20) not null default 'Activo' -- Estado Activo por defecto
     
@@ -167,7 +170,8 @@ create table Prestamo (
 -- 11. MULTA: Registra los cobros a los socios que devolvieron los libros tarde
 create table Multa (
     id_multa bigint generated always as identity primary key,
-    id_prestamo bigint not null unique,
+    id_prestamo bigint not null,
+		constraint uq_multa_prestamo unique (id_prestamo),
     id_tarifa bigint not null, 
     dias_retraso int not null,
     monto_total numeric(8,2) not null, 
