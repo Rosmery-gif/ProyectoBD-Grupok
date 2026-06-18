@@ -8,6 +8,7 @@ create database GestionBiblioteca;
 
 -- SECCIÓN 1: TABLAS BÁSICAS (DATOS QUE NO DEPENDEN DE OTRAS TABLAS)
 
+begin;
 
 -- 1. EDITORIAL: Guarda las empresas que publican los libros
 create table Editorial (
@@ -184,3 +185,5 @@ create table Multa (
     -- Solo permite que la multa esté en uno de estos dos estados
     constraint chk_estado_pago check (estado_pago IN ('Pendiente', 'Pagada'))
 );
+
+commit;

@@ -1,11 +1,16 @@
+
+Begin;
+
 --Evitar llaves duplicadas al insertar datos nuevos
 select setval(pg_get_serial_sequence('prestamo', 'id_prestamo'), coalesce((select MAX(id_prestamo) from prestamo), 1));
 select setval(pg_get_serial_sequence('ejemplar', 'id_ejemplar'), coalesce((select MAX(id_ejemplar) from ejemplar), 1));
 select setval(pg_get_serial_sequence('socio', 'id_socio'), coalesce((select MAX(id_socio) from socio), 1));
 select setval(pg_get_serial_sequence('multa', 'id_multa'), coalesce((select MAX(id_multa) from multa), 1));
 
+commit;
 ----------------------------------------------------------------------
 --actualizar fecha limite prestamo
+begin;
 create or replace function fn_actualizar_limite_prestamo()
 returns trigger as $$
 begin 
@@ -21,9 +26,10 @@ create trigger trg_actualizar_limite_prestamo
 before insert on prestamo
 for each row
 execute function fn_actualizar_limite_prestamo();
-
+commit;
 ----------------------------------------------------------------------
 --calcular multa
+begin;
 create or replace procedure sp_calcular_multas(p_id_tarifa bigint)
 language plpgsql
 as $$
@@ -43,9 +49,10 @@ begin
 		and not exists(select 1 from multa m where m.id_prestamo = p.id_prestamo);
 end;
 $$;
-
+commit;
 ------------------------------------------------------------------------------
----reserva de libro con validacion disponibilidad 
+---reserva de libro con validacion disponibilidad
+begin;
 create or replace procedure sp_reserva_libro(
 	p_id_ejemplar bigint,
 	p_id_socio bigint,
@@ -71,9 +78,10 @@ begin
 	end if;
 end;
 $$;
-
+commit;
 --------------------------------------------------------------------------------
 --actualizar estado prestamo
+begin;
 create or replace function fn_actualiza_estado_prestamo()
 returns trigger 
 as $$
@@ -96,9 +104,10 @@ create trigger trg_actualiza_estado_prestamo
 after update on prestamo
 for each row
 execute function fn_actualiza_estado_prestamo();
-
+commit;
 ------------------------------------------------------------------------------------------
 --actualizar estado multa
+begin;
 create or replace function fn_actualiza_estado_multa()
 returns trigger 
 as $$
@@ -117,10 +126,10 @@ create trigger trg_actualiza_estado_multa
 after update on multa
 for each row
 execute function fn_actualiza_estado_multa();
-
+commit;
 ------------------------------------------------------------------------------------------
 --libros por categoria
-
+begin;
 create or replace function fn_consulta_categoria(p_nombre_categoria varchar)
 returns table (
 isbn_libro varchar,
@@ -136,3 +145,4 @@ return query
 	WHERE c.nombre_categoria = p_nombre_categoria;
 	end;
 $$;
+commit;

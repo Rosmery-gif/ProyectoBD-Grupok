@@ -23,6 +23,8 @@ SET row_security = off;
 -- Data for Name: autor; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
+begin;
+
 SET session_replication_role = 'replica';
 
 INSERT INTO public.autor (id_autor, nombre, nacionalidad) OVERRIDING SYSTEM VALUE VALUES (1, 'Miguel de Cervantes', 'Española');
@@ -1278,7 +1280,7 @@ INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_pre
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (172, 183, 69, 7, '2026-02-15', '2026-04-30', NULL, NULL, 'Vencido');
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (173, 109, 29, 9, '2026-01-02', '2026-01-17', NULL, NULL, 'Vencido');
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (174, 116, 79, 13, '2025-04-01', '2025-04-16', '2025-04-06', NULL, 'Devuelto');
-INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (175, 277, 85, 11, '2026-04-16', '2026-04-31', NULL, NULL, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (175, 277, 85, 11, '2026-04-16', '2026-04-30', NULL, NULL, 'Vencido');
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (176, 132, 87, 10, '2026-04-15', '2026-04-30', NULL, NULL, 'Vencido');
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (177, 219, 81, 12, '2026-04-27', '2026-05-12', NULL, NULL, 'Vencido');
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (178, 238, 42, 3, '2026-01-20', '2026-02-05', NULL, NULL, 'Vencido');
@@ -1672,7 +1674,6 @@ INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (52, 194, 2, 70, 70.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (53, 196, 2, 115, 115.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (54, 197, 2, 77, 77.00, 'Pendiente');
-INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (54, 197, 2, 77, 77.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (55, 198, 2, 121, 121.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (56, 199, 2, 135, 135.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (57, 200, 2, 43, 43.00, 'Pendiente');
@@ -1680,6 +1681,8 @@ INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (59, 318, 2, 90, 90.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (60, 418, 2, 113, 113.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (61, 473, 2, 132, 132.00, 'Pendiente');
+
+commit;
 
 --
 -- Name: autor_id_autor_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
