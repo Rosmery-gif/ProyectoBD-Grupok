@@ -45,8 +45,6 @@ create table Socio (
     estado varchar(20) not null default 'Activo' -- Estado Activo por defecto
     
     -- Solo permite que el socio esté en uno de estos dos estados
-    cestado varchar(20) not null default 'Activo',
-
 	constraint chk_socio_estado
     	check (estado in ('Activo', 'Inactivo'))
 );
@@ -103,8 +101,6 @@ create table Ejemplar (
     estado varchar(30) not null default 'Disponible',
     
     -- Solo permite que el libro físico esté en uno de estos dos estados
-    estado varchar(30) not null default 'Disponible',
-
 	constraint chk_ejemplar_estado
     	check (estado in ('Disponible', 'Reservado')),
     constraint fk_ejemplar_libro foreign key (ISBN)
