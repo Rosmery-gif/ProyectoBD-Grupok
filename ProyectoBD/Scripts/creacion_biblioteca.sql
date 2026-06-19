@@ -90,8 +90,6 @@ create table Tarifa_multa (
     constraint chk_tarifa_precio
         check (precio_por_dia >= 0)
 );
-);
-
 
 -- SECCIÓN 2: TABLAS DE INFORMACIÓN DE LIBROS
 
