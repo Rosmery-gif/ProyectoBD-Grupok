@@ -82,7 +82,7 @@ create table Empleado (
 create table Tarifa_multa (
     id_tarifa bigint generated always as identity,
     descripcion varchar(100) not null,
-    precio_por_dia numeric(2,2) not null,
+    precio_por_dia numeric(5,2) not null,
 
     constraint pk_tarifa
         primary key (id_tarifa),
