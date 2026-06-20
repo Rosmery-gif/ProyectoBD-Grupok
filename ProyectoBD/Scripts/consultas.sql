@@ -16,7 +16,7 @@ from multa m
 join prestamo p on m.id_prestamo = p.id_prestamo
 join socio s on p.id_socio = s.id_socio
 where m.estado_pago = 'Pendiente'
-order by dias_retraso;
+order by dias_retraso desc;
 
 --Autores con mayor número de títulos en catálogo
 select a.id_autor  , a.nombre, count(*) numero_titulos
@@ -44,12 +44,14 @@ group by e.id_empleado, e.nombre
 order by prestamos  desc 
 limit 1;
 
+--Consultas inventadas
+
 --Socios con más libros prestados
 select s.id_socio , s.nombre  || ' ' || s.apellido nombre_socio, count (p.id_prestamo ) libros_prestados
 from socio s 
 join prestamo p on s.id_socio = p.id_socio
 where p.estado_prestamo = 'Prestado'
-group by s.id_socio  
+group by s.id_socio, s.nombre , s.apellido 
 order by libros_prestados desc
 limit 10;
 
@@ -61,3 +63,44 @@ join ejemplar e on l.isbn = e.isbn
 group by c.nombre_categoria
 order by total_ejemplares desc 
 limit 3;
+
+--Estado de libros en stock
+select l.titulo ,
+case 
+	when count(e.id_ejemplar) >= 10 then 'Titulo bien abastecido'
+	when count(e.id_ejemplar) between 7 and 9 then 'Titulo abastecido'
+	when count(e.id_ejemplar) between 4 and 6 then 'Titulo poco abastecido'
+	else 'Titulo muy poco abastecido'
+end estado_stock , count(e.id_ejemplar ) cantidad_ejemplares
+from libro l 
+join ejemplar e on l.isbn = e.isbn
+group by l.titulo 
+order by cantidad_ejemplares desc;
+
+--Socios que más tiempo han tenido un libro
+select s.nombre || ' ' || s.apellido nombre_socio, p.fecha_prestamo , p.fecha_devolucion ,
+p.fecha_devolucion - p.fecha_prestamo dias_posecion 
+from prestamo p 
+join socio s on p.id_socio = s.id_socio
+where p.estado_prestamo = 'Devuelto'
+order by dias_posecion desc
+limit 10;
+
+--Clasificación de devoluciones de este año
+select p.id_prestamo , s.nombre || ' ' || s.apellido nombre_socio, extract(month from p.fecha_devolucion) mes_devuelto,
+case
+	when p.fecha_devolucion <= p.fecha_limite then 'Entregado a tiempo'
+	when p.fecha_devolucion - p.fecha_limite between 1 and 5 then 'Retraso leve'
+	when p.fecha_devolucion - p.fecha_limite between 6 and 9 then 'Retraso moderado'
+	else 'Retraso grave'
+end tipo_retraso
+from prestamo p 
+join socio s on p.id_socio = s.id_socio
+where p.fecha_devolucion is not null
+order by 
+case 
+	when p.fecha_devolucion <= p.fecha_limite then 1
+	when p.fecha_devolucion - p.fecha_limite between 1 and 5 then 2
+	when p.fecha_devolucion - p.fecha_limite between 6 and 9 then 3
+	else 4
+end;
