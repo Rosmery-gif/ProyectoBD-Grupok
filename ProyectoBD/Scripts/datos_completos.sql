@@ -895,7 +895,7 @@ INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE
 INSERT INTO public.libro_autor (id_autor, isbn) VALUES (1, '843760494-2'); 
 INSERT INTO public.libro_autor (id_autor, isbn) VALUES (2, '950070038-1'); 
 INSERT INTO public.libro_autor (id_autor, isbn) VALUES (3, '185326095-X'); 
-INSERT INTO public.libro_autor (id_autor, isbn) VALUES (4, '842063315-X'); -
+INSERT INTO public.libro_autor (id_autor, isbn) VALUES (4, '842063315-X');
 INSERT INTO public.libro_autor (id_autor, isbn) VALUES (5, '950515605-1'); 
 INSERT INTO public.libro_autor (id_autor, isbn) VALUES (6, '840134190-8'); 
 INSERT INTO public.libro_autor (id_autor, isbn) VALUES (7, '842044239-7'); 
