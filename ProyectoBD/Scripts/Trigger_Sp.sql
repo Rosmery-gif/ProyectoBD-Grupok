@@ -86,6 +86,10 @@ begin;
 create or replace function fn_actualiza_estado_prestamo()
 returns trigger
 as $$
+declare
+    v_dias_retraso integer;
+    v_tarifa numeric(4,2);
+    v_monto_total numeric(10,2);
 begin
     if new.estado_prestamo = 'Devuelto' and old.estado_prestamo <> 'Devuelto' then
         update ejemplar
@@ -96,10 +100,26 @@ begin
         update ejemplar
         set estado = 'Reservado'
         where id_ejemplar = new.id_ejemplar;
+
+		v_dias_retraso := current_date - new.fecha_limite;
+
+        if v_dias_retraso <= 0 then
+            v_dias_retraso := 1;
+        end if;
+
+		select precio_por_dia into v_tarifa
+        from tarifa_multa
+        where id_tarifa = 2;
+
+        v_monto_total := v_dias_retraso * v_tarifa;
+
+        insert into multa (id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago)
+        values (new.id_prestamo, 2, v_dias_retraso, v_monto_total, 'Pendiente');
     end if;
     return new;
 end;
 $$ language plpgsql;
+commit;
 
 create or replace trigger trg_actualiza_estado_prestamo
 after update on prestamo
