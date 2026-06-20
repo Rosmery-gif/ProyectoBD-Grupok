@@ -1,10 +1,10 @@
---       BASE DE DATOS PARA LA GESTIÓN DE UNA BIBLIOTECA
+-- BASE DE DATOS PARA LA GESTIÓN DE UNA BIBLIOTECA
 
 -- CREACIÓN DE LA BASE DE DATOS
-create database GestionBiblioteca;
+create database gestion_biblioteca;
 
 --Conexion a la BASE DE DATOS
-\c gestionbiblioteca
+\c gestion_biblioteca
 
 -- SECCIÓN 1: TABLAS BÁSICAS (DATOS QUE NO DEPENDEN DE OTRAS TABLAS)
 
