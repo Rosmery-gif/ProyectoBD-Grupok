@@ -135,7 +135,7 @@ begin
     if new.estado_pago = 'Pagada' and old.estado_pago <> 'Pagada' THEN
         update Prestamo
         set estado_prestamo = 'Devuelto',
-            fecha_devolucion = current_date,
+            fecha_devolucion = current_date
         where id_prestamo = new.id_prestamo;
     end if;
     return new;
