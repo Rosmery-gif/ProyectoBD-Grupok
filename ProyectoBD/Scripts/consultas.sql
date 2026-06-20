@@ -11,12 +11,13 @@ order by veces_prestado desc
 limit 20;
 
 --Socios con multas pendientes
-select s.nombre ||' '|| s.apellido nombre_socio , m.dias_retraso, m.monto_total  
+select p.id_prestamo , s.nombre ||' '|| s.apellido nombre_socio , m.dias_retraso, m.monto_total  
 from multa m 
 join prestamo p on m.id_prestamo = p.id_prestamo
 join socio s on p.id_socio = s.id_socio
 where m.estado_pago = 'Pendiente'
-order by dias_retraso desc;
+order by dias_retraso desc
+limit 10 offset 20; --Muestra la 3 pag
 
 --Autores con mayor número de títulos en catálogo
 select a.id_autor  , a.nombre, count(*) numero_titulos
