@@ -119,7 +119,6 @@ begin
     return new;
 end;
 $$ language plpgsql;
-commit;
 
 create or replace trigger trg_actualiza_estado_prestamo
 after update on prestamo
