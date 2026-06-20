@@ -1722,7 +1722,36 @@ INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_pre
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (498, 156, 3, 4, '2026-05-18', '2026-06-02', '2026-05-31', 4, 'Devuelto');
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (499, 251, 37, 14, '2026-06-15', '2026-06-30', NULL, NULL, 'Prestado');
 INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (500, 33, 71, 7, '2026-05-12', '2026-05-27', '2026-05-25', 7, 'Devuelto');
-
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (501, 105, 32, 4, '2026-01-05', '2026-01-20', '2026-02-15', 8, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (502, 214, 12, 11, '2026-01-10', '2026-01-25', '2026-03-01', 3, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (503, 88, 45, 1, '2026-01-15', '2026-01-30', '2026-02-20', 14, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (504, 301, 7, 9, '2026-01-22', '2026-02-06', '2026-04-10', 5, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (505, 142, 19, 15, '2026-02-01', '2026-02-16', '2026-03-15', 2, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (506, 55, 88, 6, '2026-02-05', '2026-02-20', '2026-05-02', 12, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (507, 189, 63, 13, '2026-02-10', '2026-02-25', '2026-03-20', 7, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (508, 274, 25, 2, '2026-02-18', '2026-03-05', '2026-04-01', 10, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (509, 93, 50, 8, '2026-02-22', '2026-03-09', '2026-03-25', 1, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (510, 120, 14, 12, '2026-03-01', '2026-03-16', '2026-06-01', 15, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (511, 44, 99, 3, '2026-03-05', '2026-03-20', '2026-04-15', 6, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (512, 265, 5, 14, '2026-03-12', '2026-03-27', '2026-05-10', 9, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (513, 177, 72, 7, '2026-03-18', '2026-04-02', '2026-04-22', 11, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (514, 230, 41, 10, '2026-03-25', '2026-04-09', '2026-05-18', 4, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (515, 19, 80, 5, '2026-04-01', '2026-04-16', '2026-04-30', 13, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (516, 299, 16, 1, '2026-04-05', '2026-04-20', '2026-05-25', 10, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (517, 82, 33, 11, '2026-04-10', '2026-04-25', '2026-06-12', 2, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (518, 150, 57, 8, '2026-04-15', '2026-04-30', '2026-05-15', 15, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (519, 241, 22, 13, '2026-04-20', '2026-05-05', '2026-05-28', 6, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (520, 112, 91, 4, '2026-04-26', '2026-05-11', '2026-07-03', 1, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (521, 67, 10, 14, '2026-05-01', '2026-05-16', '2026-06-05', 9, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (522, 135, 68, 2, '2026-05-04', '2026-05-19', '2026-05-29', 12, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (523, 208, 39, 9, '2026-05-08', '2026-05-23', '2026-06-20', 3, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (524, 50, 52, 15, '2026-05-12', '2026-05-27', '2026-07-15', 7, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (525, 280, 26, 6, '2026-05-15', '2026-05-30', '2026-06-18', 11, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (526, 163, 74, 3, '2026-05-20', '2026-06-04', '2026-06-25', 14, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (527, 222, 85, 12, '2026-05-25', '2026-06-09', '2026-07-02', 5, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (528, 79, 13, 7, '2026-06-01', '2026-06-16', '2026-07-10', 8, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (529, 147, 47, 10, '2026-06-05', '2026-06-20', '2026-07-05', 4, 'Vencido');
+INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_prestamo, fecha_prestamo, fecha_limite, fecha_devolucion, id_empleado_devolucion, estado_prestamo) OVERRIDING SYSTEM VALUE VALUES (530, 291, 60, 5, '2026-06-09', '2026-06-24', '2026-08-01', 13, 'Vencido');
 --
 -- Data for Name: tarifa_multa; Type: TABLE DATA; Schema: public; Owner: postgres
 --
@@ -1735,7 +1764,6 @@ INSERT INTO public.tarifa_multa (id_tarifa, descripcion, precio_por_dia) OVERRID
 -- Data for Name: multa; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
--- MULTAS DETECTADAS EN EL LOTE 101 - 200 (CORREGIDO DESDE ID 1)
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (1, 131, 2, 19, 19.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (2, 132, 2, 22, 22.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (3, 134, 2, 68, 68.00, 'Pendiente');
@@ -1797,7 +1825,36 @@ INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (59, 318, 2, 90, 90.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (60, 418, 2, 113, 113.00, 'Pendiente');
 INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (61, 473, 2, 132, 132.00, 'Pendiente');
-
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (62, 501, 2, 26, 26.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (63, 502, 1, 35, 35.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (64, 503, 2, 21, 21.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (65, 504, 1, 63, 63.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (66, 505, 2, 27, 27.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (67, 506, 1, 71, 71.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (68, 507, 2, 23, 23.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (69, 508, 1, 27, 27.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (70, 509, 2, 16, 16.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (71, 510, 1, 77, 77.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (72, 511, 2, 26, 26.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (73, 512, 1, 44, 44.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (74, 513, 2, 20, 20.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (75, 514, 1, 39, 39.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (76, 515, 2, 14, 14.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (77, 516, 1, 35, 35.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (78, 517, 2, 48, 48.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (79, 518, 1, 15, 15.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (80, 519, 2, 23, 23.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (81, 520, 1, 53, 53.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (82, 521, 2, 20, 20.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (83, 522, 1, 10, 10.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (84, 523, 2, 28, 28.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (85, 524, 1, 49, 49.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (86, 525, 2, 19, 19.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (87, 526, 1, 21, 21.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (88, 527, 2, 23, 23.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (89, 528, 1, 24, 24.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (90, 529, 2, 15, 15.00, 'Pendiente');
+INSERT INTO public.multa (id_multa, id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago) OVERRIDING SYSTEM VALUE VALUES (91, 530, 1, 38, 38.00, 'Pendiente');
 commit;
 
 --
