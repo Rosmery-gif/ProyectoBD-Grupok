@@ -46,11 +46,11 @@ values (3, 1, 1, 'Prestado');
 UPDATE prestamo
 SET fecha_prestamo = CURRENT_DATE - 15,
     fecha_limite = CURRENT_DATE - 5,
-    estado_prestamo = 'Prestado'
-WHERE id_prestamo = 1;
+    estado_prestamo = 'Vencido'
+WHERE id_prestamo = 531;
 
-CALL sp_calcular_multa(1,3);
+CALL sp_calcular_multa(92,3);
 
 --id_tarifa
 insert into Multa (id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago)
-values (501, 1, 5, 25.00, 'Pendiente');
+values (531, 1, 5, 25.00, 'Pendiente');
