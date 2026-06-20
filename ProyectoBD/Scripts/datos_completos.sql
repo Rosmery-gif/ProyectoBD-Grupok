@@ -750,7 +750,6 @@ INSERT INTO public.ejemplar (id_ejemplar, isbn, estado) OVERRIDING SYSTEM VALUE 
 INSERT INTO public.ejemplar (id_ejemplar, isbn, estado) OVERRIDING SYSTEM VALUE VALUES (336, '968160990-1', 'Disponible');
 INSERT INTO public.ejemplar (id_ejemplar, isbn, estado) OVERRIDING SYSTEM VALUE VALUES (337, '968160991-X', 'Reservado');
 INSERT INTO public.ejemplar (id_ejemplar, isbn, estado) OVERRIDING SYSTEM VALUE VALUES (338, '015695880-1', 'Disponible');
-
 INSERT INTO public.ejemplar (id_ejemplar, isbn, estado) OVERRIDING SYSTEM VALUE VALUES (339, '207040984-5', 'Disponible');
 INSERT INTO public.ejemplar (id_ejemplar, isbn, estado) OVERRIDING SYSTEM VALUE VALUES (340, '207040984-5', 'Disponible');
 INSERT INTO public.ejemplar (id_ejemplar, isbn, estado) OVERRIDING SYSTEM VALUE VALUES (341, '207040984-5', 'Disponible');
@@ -1756,8 +1755,8 @@ INSERT INTO public.prestamo (id_prestamo, id_ejemplar, id_socio, id_empleado_pre
 -- Data for Name: tarifa_multa; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.tarifa_multa (id_tarifa, descripcion, precio_por_dia) OVERRIDING SYSTEM VALUE VALUES (1, 'Estudiante ', 0.50);
-INSERT INTO public.tarifa_multa (id_tarifa, descripcion, precio_por_dia) OVERRIDING SYSTEM VALUE VALUES (2, 'General ', 1.00);
+INSERT INTO public.tarifa_multa (id_tarifa, descripcion, precio_por_dia) OVERRIDING SYSTEM VALUE VALUES (1, 'Estudiante ', 0.25);
+INSERT INTO public.tarifa_multa (id_tarifa, descripcion, precio_por_dia) OVERRIDING SYSTEM VALUE VALUES (2, 'General ', 0.75);
 
 
 --
@@ -1882,7 +1881,7 @@ SELECT pg_catalog.setval('public.editorial_id_editorial_seq', 20, true);
 -- Name: ejemplar_id_ejemplar_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.ejemplar_id_ejemplar_seq', 338, true);
+SELECT pg_catalog.setval('public.ejemplar_id_ejemplar_seq', 452, true);
 
 
 --
@@ -1896,14 +1895,14 @@ SELECT pg_catalog.setval('public.empleado_id_empleado_seq', 15, true);
 -- Name: multa_id_multa_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.multa_id_multa_seq', 70, true);
+SELECT pg_catalog.setval('public.multa_id_multa_seq', 91, true);
 
 
 --
 -- Name: prestamo_id_prestamo_seq; Type: SEQUENCE SET; Schema: public; Owner: postgres
 --
 
-SELECT pg_catalog.setval('public.prestamo_id_prestamo_seq', 500, true);
+SELECT pg_catalog.setval('public.prestamo_id_prestamo_seq', 530, true);
 
 
 --
