@@ -131,15 +131,11 @@ begin;
 create or replace function fn_actualiza_estado_multa()
 returns trigger 
 as $$
-declare
-	v_id_empleado_devolucion bigint;
 begin
     if new.estado_pago = 'Pagada' and old.estado_pago <> 'Pagada' THEN
-		v_id_empleado_devolucion := floor(random() * 15 + 1)::bigint;
         update Prestamo
         set estado_prestamo = 'Devuelto',
             fecha_devolucion = current_date,
-            id_empleado_devolucion = v_id_empleado_devolucion
         where id_prestamo = new.id_prestamo;
     end if;
     return new;
