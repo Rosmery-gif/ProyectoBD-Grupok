@@ -30,23 +30,24 @@ commit;
 ----------------------------------------------------------------------
 --calcular multa
 begin;
-create or replace procedure sp_calcular_multas(p_id_tarifa bigint)
+create or replace procedure sp_calcular_multa(
+	p_id_multa bigint,
+	p_id_empleado bigint
+)
 language plpgsql
 as $$
-begin 
+declare
+	v_id_prestamo bigint;
+begin
+	select id_prestamo into v_id_prestamo from multa where id_multa = p_id_multa;
+	update multa
+	set estado_pago = 'Pagada'
+	where id_multa = p_id_multa;
 	update prestamo
-	set estado_prestamo = 'Vencido'
-	where fecha_limite < current_date and estado_prestamo = 'Prestado';
-	insert into multa(id_prestamo, id_tarifa, dias_retraso, monto_total)
-	select
-	p.id_prestamo,
-	p_id_tarifa,
-	(current_date - p.fecha_limite) as dias_retraso,((current_date - p.fecha_limite) * t.precio_por_dia) as monto_total
-	from prestamo p
-	join tarifa_multa t on t.id_tarifa = p_id_tarifa
-	where p.estado_prestamo = 'Vencido'
-		and p.fecha_limite < current_date
-		and not exists(select 1 from multa m where m.id_prestamo = p.id_prestamo);
+	set estado_prestamo = 'Devuelto',
+		fecha_devolucion = current_date,
+		id_empleado_devolucion = p_id_empleado
+	where id_prestamo = v_id_prestamo;
 end;
 $$;
 commit;
@@ -83,7 +84,7 @@ commit;
 --actualizar estado prestamo
 begin;
 create or replace function fn_actualiza_estado_prestamo()
-returns trigger 
+returns trigger
 as $$
 begin
     if new.estado_prestamo = 'Devuelto' and old.estado_prestamo <> 'Devuelto' then
