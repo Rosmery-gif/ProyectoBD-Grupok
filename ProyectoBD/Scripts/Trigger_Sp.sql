@@ -103,10 +103,7 @@ begin
 
 		v_dias_retraso := current_date - new.fecha_limite;
 
-        if v_dias_retraso <= 0 then
-            v_dias_retraso := 1;
-        end if;
-
+		if v_dias_retraso > 0 then
 		select precio_por_dia into v_tarifa
         from tarifa_multa
         where id_tarifa = 2;
@@ -115,6 +112,7 @@ begin
 
         insert into multa (id_prestamo, id_tarifa, dias_retraso, monto_total, estado_pago)
         values (new.id_prestamo, 2, v_dias_retraso, v_monto_total, 'Pendiente');
+        end if;
     end if;
     return new;
 end;
