@@ -22,7 +22,7 @@ begin
 end;
 $$ language plpgsql;
 
-create trigger trg_actualizar_limite_prestamo
+create or replace trigger trg_actualizar_limite_prestamo
 before insert on prestamo
 for each row
 execute function fn_actualizar_limite_prestamo();
@@ -101,7 +101,7 @@ begin
 end;
 $$ language plpgsql;
 
-create trigger trg_actualiza_estado_prestamo
+create or replace trigger trg_actualiza_estado_prestamo
 after update on prestamo
 for each row
 execute function fn_actualiza_estado_prestamo();
@@ -127,7 +127,7 @@ begin
 end;
 $$ language plpgsql;
 
-create trigger trg_actualiza_estado_multa
+create or replace trigger trg_actualiza_estado_multa
 after update on multa
 for each row
 execute function fn_actualiza_estado_multa();
