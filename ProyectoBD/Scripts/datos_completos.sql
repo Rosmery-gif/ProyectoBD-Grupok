@@ -871,21 +871,21 @@ INSERT INTO public.ejemplar (id_ejemplar, isbn, estado) OVERRIDING SYSTEM VALUE 
 -- Data for Name: empleado; Type: TABLE DATA; Schema: public; Owner: postgres
 --
 
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (1, 'Rossie', 'Coordinator');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (2, 'Winnie', 'Assistant Librarian');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (3, 'Nealon', 'Archivist');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (4, 'Veradis', 'Administrator');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (1, 'Rossie', 'Coordinadora');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (2, 'Winnie', 'Asistente de libreria');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (3, 'Nealon', 'Archivista');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (4, 'Veradis', 'Administradora');
 INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (5, 'Flinn', 'Supervisor');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (6, 'Edi', 'Administrator');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (7, 'Hamlin', 'Administrative Assistant');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (8, 'Hyatt', 'Archivist');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (9, 'Martynne', 'Coordinator');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (10, 'Mabelle', 'Supervisor');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (11, 'Juan', 'Loan Manager');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (12, 'Maynord', 'Receptionist');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (13, 'Stace', 'Receptionist');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (14, 'Christye', 'Loan Manager');
-INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (15, 'Regen', 'Assistant Librarian');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (6, 'Edi', 'Administrador');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (7, 'Hamlin', 'Asistente administrativo');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (8, 'Hyatt', 'Archivista');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (9, 'Martynne', 'Coordinador');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (10, 'Mabelle', 'Supervisora');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (11, 'Juan', 'Manager de prestamos');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (12, 'Maynord', 'Recepcionista');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (13, 'Stace', 'Recepcionista');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (14, 'Christye', 'Manager de prestamos');
+INSERT INTO public.empleado (id_empleado, nombre, cargo) OVERRIDING SYSTEM VALUE VALUES (15, 'Regen', 'Asistente de libreria');
 
 
 --
